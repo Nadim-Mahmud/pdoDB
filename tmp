@@ -1,0 +1,12 @@
+CREATE TABLE IF NOT EXISTS books(
+            id INT UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,
+            title VARCHAR(250),
+            author VARCHAR(250),
+            available BIT,
+            isbn INT,
+            pages INT
+        )ENGINE=InnoDb;
+
+
+INSERT INTO books (title, author, available, isbn, pages)
+VALUES ("Han", "Solo", 1, 1212321, 123);
