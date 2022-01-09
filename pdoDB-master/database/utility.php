@@ -2,15 +2,9 @@
     
     function add($db, $title, $author, $available, $isbn, $pages){
 
-        // $qt = "INSERT INTO books (title, author, available, isbn, pages)
-        // VALUES ($title, $author, $available, $isbn, $pages);";
-        
-        // changed for sqlite
-        
         $qt = "INSERT INTO books (title, author, available, isbn, pages)
-        VALUES ('$title', '$author', '$available', '$isbn', '$pages');";
+        VALUES (\"$title\", \"$author\", $available, $isbn, $pages);";
         
-
         $db->query($qt);
     }
 
